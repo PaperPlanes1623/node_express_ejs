@@ -10,14 +10,38 @@ app.get("/", function (req, res) {
   var currentDay = today.getDay();
   var day = "";
 
-  if (currentDay === 6 || currentDay === 0) {
-    day = "Weekend";
+  if (currentDay === 0) {
+    day = "Sunday";
     // res.sendFile(__dirname + "/Weekend.html");
     res.render("list", { kindOfDay: day })
   }
-  else {
-    day = "Weekday";
+  else if (currentDay === 1) {
+    day = "Monday";
     // res.sendFile(__dirname + "/weekday.html");
+    res.render("list", { kindOfDay: day });
+  }
+  else if (currentDay === 2) {
+    day = "Tuesday";
+    // res.sendFile(__dirname + "/weekday.html");
+    res.render("list", { kindOfDay: day });
+  }
+  else if (currentDay === 3) {
+    day = "Wednesday";
+    // res.sendFile(__dirname + "/weekday.html");
+    res.render("list", { kindOfDay: day });
+  }
+  else if (currentDay === 4) {
+    day = "Thursday";
+    // res.sendFile(__dirname + "/weekday.html");
+    res.render("list", { kindOfDay: day });
+  }
+  else if (currentDay === 5) {
+    day = "Friday";
+    // res.sendFile(__dirname + "/weekday.html");
+    res.render("list", { kindOfDay: day });
+  }
+  else {
+    day = "Saturday";
   }
   res.render("list", { kindOfDay: day });
 });
