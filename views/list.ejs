@@ -1,13 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/styles.css">
-  <title>Todo List</title>
-</head>
+<%- include("header") -%>
 
 <body>
 
@@ -25,4 +19,5 @@
 
     <form class="" action="/" method="post">
       <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
-      <button type="submit" name="list" value=<%= listTitle %></button> + </button> </form> </div> </body> </html>
+      <button type="submit" name="list" value=<%= listTitle %></button> + </form> </form> </div>
+        <%- include("footer") -%> </body> </html>
